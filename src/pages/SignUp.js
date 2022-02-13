@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Axios from 'axios';
+import axios from 'axios';
 import {Footer} from './../components';
 import './SignUp.css';
 
@@ -32,16 +32,16 @@ export default function SignUp() {
 
     const SignUp = async (e) => {
       e.preventDefault();
-      console.log(signUp);
-      const res = await Axios.post(`${process.env.SERVER_API}/signup`,signUp);
+      //console.log(signUp);
+      const res = await axios.post(`${process.env.REACT_APP_SERVER_API}/signup`,signUp);
       console.log(res.data);
 
     }
 
     const SignIn = async (e) => {
       e.preventDefault();
-      console.log(signIn);
-      const res = await Axios.post(`${process.env.SERVER_API}/signIn`,signIn);
+      //console.log(signIn);
+      const res = await axios.post(`${process.env.REACT_APP_SERVER_API}/signIn`,signIn);
       console.log(res.data);
     }
 
