@@ -1,0 +1,93 @@
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 450px;
+    perspective: 1000px;
+    float:left;
+    border-radius: 10px;
+    margin:50px 30px 40px 0;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+  
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+  
+.flip-card-front {
+    background-color: #FFF;
+}
+
+.flip-card-front ul {
+    list-style: none;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.flip-card-front ul li {
+    text-decoration: none;
+    width:100%;
+    height:50px;
+    font-size: 15px;
+    color: #777777;
+    font-family: 'lato';
+    border-bottom: 1px solid #ccc;
+    line-height: 50px;
+}
+
+.flip-card-front:not(:last-child){
+    border-bottom: none;
+}
+
+.flip-card-front_top {
+    width:100%;
+    height:250px;
+}
+.flip-card-back {
+    background-color: #2a2a72;
+    background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
+    color: white;
+    transform: rotateY(180deg);
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+
+}
+
+.flip-card-back_only {
+    font-size:16px;
+}
+
+.flip-card-back_price {
+    font-size:60px;
+    font-weight: 200;
+}
+.flip-card-back_btn { 
+    width: 200px;
+    height:80px;
+    padding: 10px;
+    border-radius: 45px;
+    background-color: transparent;
+    color: #FFF;
+    border:none;
+    border: 2px solid #FFF;
+    font-size:18px;
+    margin-left:50px;
+}
